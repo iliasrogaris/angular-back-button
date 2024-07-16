@@ -1,0 +1,12 @@
+<h2 mat-dialog-title class="confirmation-dialog-header sl-flexbox-row sl-flexbox-justify-space-between sl-flexbox-align-center">
+	<span class="dialog-title">{{ data.title }}</span>
+</h2>
+<mat-dialog-content class="confirmation-dialog-content">
+	<div class="content-wrapper">
+		<div class="message" [innerHtml]="data.content"></div>
+	</div>
+</mat-dialog-content>
+<mat-dialog-actions class="confirmation-dialog-actions sl-flexbox-row sl-flexbox-justify-end sl-flexbox-align-center">
+	<button *ngIf="data.showCancelButton" class="button cancel-button" mat-button (click)="cancel()">{{ data.cancelButtonCaption }}</button>
+	<button class="button primary-button confirm-button" mat-button (click)="confirm()">{{ data.confirmButtonCaption }}</button>
+</mat-dialog-actions>
